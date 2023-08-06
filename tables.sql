@@ -50,7 +50,7 @@ INSERT INTO Customer (C_FirstName, C_LastName, C_Address, C_City, C_State, C_Pho
 ('Andrew', 'Taylor', '456 Cedar Ave', 'San Francisco', 'CA', '9012345678', 'andrew.taylor@email.com'),
 ('Lauren', 'Clark', '789 Oak St', 'Dallas', 'TX', '0123456789', 'lauren.clark@email.com');
 
-______________________________________________________________________________________________________________________
+
 CREATE TABLE Product(
 ProductID INT PRIMARY KEY AUTO_INCREMENT,
 P_Name VARCHAR(255) NOT NULL,
@@ -100,7 +100,7 @@ INSERT INTO Product (P_Name, P_Description, P_Type, P_Price) VALUES
 ("Timberland 6-Inch Premium", "Sturdy and durable boots for outdoor activities", "boots", 189.99),
 ("Steve Madden Irenee", "Minimalist and versatile sandals for any occasion", "sandals", 79.99);
 
-______________________________________________________________________________________________________________________
+
 CREATE TABLE Inventory (
 InventoryID INT PRIMARY KEY AUTO_INCREMENT,
 ProductID INT NOT NULL,
@@ -154,7 +154,7 @@ INSERT INTO Inventory (ProductID, P_InStock, P_Date, P_Sold, P_Qoh, P_Location, 
 (39, 50, '2022-11-19', 5, 45, 'Store', '2023-03-11 09:45:00'),
 (40, 300, '2022-11-20', 60, 240, 'Warehouse', '2023-03-11 12:00:00');
 
-______________________________________________________________________________________________________________________
+
 CREATE TABLE Orders (
 OrderID INT PRIMARY KEY AUTO_INCREMENT,
 CustomerID INT NOT NULL, 
@@ -207,7 +207,7 @@ INSERT INTO Orders (CustomerID, O_Date, O_Address, O_City, O_State, O_Status) VA
 (14, '2022-12-09 20:30:00', '582 Birch Ln', 'Dallas', 'TX', 'Delivered'),
 (15, '2022-12-10 21:45:00', '795 Walnut Dr', 'San Francisco', 'CA', 'Delivered');
 
-______________________________________________________________________________________________________________________
+
 CREATE TABLE OrdersProduct(
 OrderID INT NOT NULL,
 ProductID INT NOT NULL,
@@ -260,7 +260,7 @@ INSERT INTO OrdersProduct (OrderID, ProductID, OP_Price, OP_Quantity, OP_TotalAm
 (20, 3, 59.99, 4, 239.96),
 (20, 4, 49.99, 2, 99.98);
 
-______________________________________________________________________________________________________________________
+
 CREATE TABLE AccountsReceivable (
 AR_ID INT PRIMARY KEY AUTO_INCREMENT,
 CustomerID INT NOT NULL,
