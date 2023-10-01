@@ -85,30 +85,6 @@ if ($results->num_rows > 0) {
   print $htmls.'</table>';} 
 else {echo "No results";}
 
-/*
-if(array_key_exists('runquery', $_POST)) {
-    $nom = $_POST['querybox'];
-
-    $sql = "SELECT * FROM product WHERE P_Name LIKE '%".$nom."%'";
-    $result = mysqli_query($conn, $sql);
-
-    if ($result->num_rows > 0) {
-        echo "Number of rows retrieved: " . $result->num_rows . "<br><br>";
-        while($rand = mysqli_fetch_assoc($result)){
-          $resultset[]=$rand;
-        }
-        $htmls = "<table><tr><th>".implode('</th><th>',array_keys($resultset[0])).'</th></tr>';
-        foreach($resultset as $set){
-            $htmls .= "<tr><td>".implode('</td><td>',$set).'</td></tr>';
-        }
-        print $htmls.'</table>';
-      } 
-      else {
-        echo "No results";
-      }  
-
-    }
-*/
 
 // Close connection
 mysqli_close($conn);
